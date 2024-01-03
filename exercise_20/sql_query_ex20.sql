@@ -7,7 +7,7 @@ FROM acquisition acq
 LEFT JOIN company comp1 ON acq.acquiring_company_id = comp1.id
 LEFT JOIN company comp2 ON acq.acquired_company_id = comp2.id
 WHERE acq.price_amount != 0
-    AND comp2.funding_total != 0
+  AND comp2.funding_total != 0
 ORDER BY amount DESC,
          acquired
 LIMIT 10;
